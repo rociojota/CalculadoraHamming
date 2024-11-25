@@ -1,83 +1,104 @@
 .header {
-position: absolute; /* Permite que el logo se coloque en la esquina superior izquierda */
-top: 12px; /* Distancia desde la parte superior */
-left: 12px; /* Distancia desde la izquierda */
-font-size: 29px;
-ima
+    position: absolute;
+    top: 10px; /* Distancia desde la parte superior */
+    left: 10px; /* Distancia desde la izquierda */
+    font-size: 24px; /* Tamaño de fuente más pequeño */
+    color: #f0f6f8; /* Azul Oscuro */
 }
 
-h2{
-    font-size: 40px;
+h2 {
+    font-size: 32px; /* Tamaño de fuente reducido */
 }
 
 p {
-font-size: 24px;
-margin-top:50px; /* Espacio arriba del párrafo */
-margin-bottom: 20px; /* Espacio debajo del párrafo */
+    font-size: 20px; /* Tamaño de fuente reducido */
+    margin-top: 30px; /* Menos espacio arriba */
+    margin-bottom: 15px; /* Menos espacio abajo */
 }
 
 .logo {
-width: 100px; /* Ajusta el tamaño de la imagen según sea necesario */
-height: auto; /* Mantiene la proporción de la imagen */
+    width: 80px; /* Tamaño de la imagen más pequeño */
+    height: auto; 
 }
-        
+
 body {
-font-family: Arial, sans-serif;
-display: flex;
-justify-content: center;
-align-items: center;
-height: 100vh;
- margin: 0;
-background-color: #e0f7fa; /* Fondo celeste claro */
-background-image: url('imagenes/fondo.jpg');
-background-size: cover; /* Para que la imagen cubra toda la pantalla */
-background-position: center; /* Centra la imagen en la pantalla */
-background-repeat: no-repeat; /* Evita que la imagen se repita */
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #e0f7fa; 
+    background-image: url('imagenes/fondo.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
 }
 
 .container {
-max-width: 500px;
-padding: 20px;
-border: 1px solid #0D47A1  ; /* Borde celeste claro */
-border-radius: 8px;
-text-align: center;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-background-color: #b3e5fc  ; /* Fondo blanco */
-margin: 0 auto;
+    max-width: 400px; /* Contenedor más estrecho */
+    padding: 15px; /* Menos espacio en el contenedor */
+    border: 1px solid #0D47A1;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #b3e5fc;
+    margin: 0 auto;
 }
 
 input[type="text"] {
-width: 80%;
-padding: 8px;
- margin: 10px 0;
-border: 1px solid #90caf9; /* Borde azul claro */
-border-radius: 4px;
-background-color: #f1f8e9; /* Fondo blanco pastel */
-display: inline-block;
-font-size: 24px;
+    width: 75%; /* Menor ancho */
+    padding: 6px; /* Menos espacio interior */
+    margin: 8px 0;
+    border: 1px solid #90caf9; 
+    border-radius: 4px;
+    background-color: #f1f8e9; 
+    font-size: 20px; /* Menor tamaño de fuente */
 }
 
 button {
-padding: 10px 20px;
-border: none;
-background-color: #121212  ; /* Azul brillante */
-color: white;
-font-size: 21px;
-cursor: pointer;
-border-radius: 4px;
-transition: background-color 0.3s; /* Transición suave al pasar el mouse */
+    padding: 8px 16px; /* Botón más pequeño */
+    border: none;
+    background-color: #121212;
+    color: white;
+    font-size: 18px; /* Menor tamaño de fuente */
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
 }
 
 button:hover {
-background-color: #1976D2; /* Azul más oscuro al pasar el mouse */
+    background-color: #1976D2;
 }
-
 
 footer {
-position: absolute;
-bottom: 10px; /* Distancia desde la parte inferior */
-right: 12px; /* Distancia desde la derecha */
-color: #b3e5fc; /* Azul Oscuro */
-font-weight: bold;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: #b3e5fc;
+    font-weight: bold;
 }
 
+/* Media Query para celular */
+@media (max-width: 600px) {
+    body {
+      font-size: 14px;
+    }
+    .header {
+      font-size: 24px; /* Ajusta el tamaño del logo */
+    }
+    h2 {
+      font-size: 32px; /* Ajusta el tamaño del título */
+    }
+    .container {
+      padding: 10px;
+      width: 90%; /* Asegura que el contenedor no se vea muy pequeño */
+    }
+    input[type="text"] {
+      font-size: 18px; /* Ajusta el tamaño de la fuente en el input */
+    }
+    button {
+      font-size: 18px; /* Ajusta el tamaño del botón */
+      padding: 8px 16px; /* Ajusta el tamaño del botón en móviles */
+    }
+  }
