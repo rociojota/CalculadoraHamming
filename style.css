@@ -11,11 +11,9 @@ h2 {
 }
 
 p {
-    font-style: italic;
     font-size: 17px; 
     margin-top: 30px; 
     margin-bottom: 15px; 
-    opacity: 0.5;
 }
 
 .logo {
@@ -74,11 +72,20 @@ button:hover {
 }
 
 footer {
-    position: absolute;
+    position: fixed; 
     bottom: 10px;
-    right: 10px;
+    left: 50%;
+    transform: translateX(-50%); 
     color: #b3e5fc;
     font-weight: bold;
+    font-style: italic;
+    opacity: 0.5;
+    text-align: center; 
+}
+
+footer p {
+    margin: 0; 
+    padding: 0; 
 }
 
 /* Media Query para celular */
