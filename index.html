@@ -22,14 +22,19 @@
     <label for="inputData"> </label>
     <input type="text" id="inputData" placeholder="Ingrese la secuencia, ej. 1011101">
     <button id="encodeButton">Codificar</button>
-    <p id="output"></p>
+    <div class="result-container" id="outputContainer" style="display: none;">
+        <p id="output"></p>
+    </div>
+
 
     <p>Ingrese el código Hamming recibido:</p>
     <label for="detectInput"> </label>
     <input type="text" id="detectInput" placeholder="Ingrese el código, ej. 01100110111">
     <button id="detectButton">Detectar error</button>
-    <p id="detectOutput"></p>
-
+     <div class="result-container" id="detectOutputContainer" style="display: none;">
+        <p id="detectOutput"></p>
+    </div>
+    
 </div>
 
 <footer>

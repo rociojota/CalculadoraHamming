@@ -46,6 +46,20 @@ body {
     margin: 0 auto;
 }
 
+.result-container {
+    background-color: #f7f7f779;  
+    border: 1px solid #5982f3;  
+    padding: 10px;  
+    margin-top: 10px;  
+    border-radius: 10px;  
+    font-size: 17px;  
+}
+
+.result-container p {
+    margin: 0;  
+    color: #070707;  
+}
+
 input[type="text"] {
     width: 75%; 
     padding: 6px;
@@ -72,19 +86,18 @@ button:hover {
 }
 
 footer {
-    position: fixed; 
+    position: absolute;
     bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%); 
-    color: #b3e5fc;
+    right: 10px;
+    color: #ffffff;
     font-weight: bold;
     font-style: italic;
-    opacity: 0.5;
-    text-align: center; 
+    opacity: 0.6;
 }
 
 footer p {
-    margin: 0; 
+    text-align: center;
+    margin: 0;
     padding: 0; 
 }
 

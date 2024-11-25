@@ -1,4 +1,10 @@
 function encode(input) {
+
+    //verificacion solo binarios
+    if (!/^[01]+$/.test(input)) {
+        return "Entrada no válida. Por favor, ingrese solo valores binarios (0 y 1).";
+    }
+
     const inputLength = input.length;
 
     let p = 0;
@@ -7,13 +13,13 @@ function encode(input) {
     }
 
     const encoded = Array(inputLength + p).fill('0');
-    let j = 0; 
+    let j = 0;
 
     for (let i = 0; i < encoded.length; i++) {
         if (isPowerOfTwo(i + 1)) {
-            encoded[i] = '0'; 
+            encoded[i] = '0';
         } else {
-            encoded[i] = input[j++]; 
+            encoded[i] = input[j++];
         }
     }
 
@@ -42,6 +48,10 @@ function isPowerOfTwo(n) {
 }
 
 function detectorYCorrector(input) {
+    if (!/^[01]+$/.test(input)) {
+        return "Entrada no válida. Por favor, ingrese solo valores binarios (0 y 1).";
+    }
+
     const n = input.length;
     let errorPos = 0;
 
@@ -54,12 +64,13 @@ function detectorYCorrector(input) {
         }
     }
 
-   
-
     const corregido = input.split('');
-    corregido[errorPos - 1] = corregido[errorPos - 1] === '1' ? '0' : '1';
-
-    return `Error detectado en la posición ${errorPos}.\nCódigo corregido: ${corregido.join('')}`;
+    if (errorPos !== 0) {
+        corregido[errorPos - 1] = corregido[errorPos - 1] === '1' ? '0' : '1';
+        return `Error detectado en la posición ${errorPos}.\n\n Código corregido: ${corregido.join('')}`;
+    } else {
+        return "No se detectaron errores.";
+    }
 }
 
 document.getElementById("encodeButton").addEventListener("click", () => {
@@ -71,6 +82,8 @@ document.getElementById("encodeButton").addEventListener("click", () => {
 
     const result = encode(inputData);
     document.getElementById("output").textContent = `Código Hamming: ${result}`;
+    document.getElementById("outputContainer").style.display = "block";  
+
 });
 
 document.getElementById("detectButton").addEventListener("click", () => {
@@ -81,5 +94,7 @@ document.getElementById("detectButton").addEventListener("click", () => {
     }
 
     const result = detectorYCorrector(detectInput);
-    document.getElementById("detectOutput").textContent = `Resultado: ${result}`;
+    document.getElementById("detectOutput").textContent = `${result}`;
+    document.getElementById("detectOutputContainer").style.display = "block";  
+
 });
