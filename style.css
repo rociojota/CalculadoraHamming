@@ -124,3 +124,28 @@ footer p {
       padding: 8px 16px; 
     }
   }
+  .info-icon {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    color: black;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    text-decoration: none;
+    border: 1px solid #ccc;
+    z-index: 1000;
+}
+
+.info-icon:hover {
+    background-color: #f0f0f0;
+    color: #333;
+}

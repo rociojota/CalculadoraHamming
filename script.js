@@ -98,3 +98,8 @@ document.getElementById("detectButton").addEventListener("click", () => {
     document.getElementById("detectOutputContainer").style.display = "block";  
 
 });
+const infoLink = document.getElementById('infoLink');
+infoLink.addEventListener('click', (event) => {
+    event.preventDefault(); 
+    window.open('manual/ManualUsuario.pdf', '_blank');
+});
