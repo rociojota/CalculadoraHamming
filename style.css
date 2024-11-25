@@ -1,0 +1,82 @@
+.header {
+position: absolute; /* Permite que el logo se coloque en la esquina superior izquierda */
+top: 12px; /* Distancia desde la parte superior */
+left: 12px; /* Distancia desde la izquierda */
+font-size: 29px;
+}
+
+h2{
+    font-size: 40px;
+}
+
+p {
+font-size: 24px;
+margin-top:50px; /* Espacio arriba del párrafo */
+margin-bottom: 20px; /* Espacio debajo del párrafo */
+}
+
+.logo {
+width: 100px; /* Ajusta el tamaño de la imagen según sea necesario */
+height: auto; /* Mantiene la proporción de la imagen */
+}
+        
+body {
+font-family: Arial, sans-serif;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+ margin: 0;
+background-color: #e0f7fa; /* Fondo celeste claro */
+background-image: url('imagenes/fondo.jpg');
+background-size: cover; /* Para que la imagen cubra toda la pantalla */
+background-position: center; /* Centra la imagen en la pantalla */
+background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+.container {
+max-width: 500px;
+padding: 20px;
+border: 1px solid #0D47A1  ; /* Borde celeste claro */
+border-radius: 8px;
+text-align: center;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+background-color: #b3e5fc  ; /* Fondo blanco */
+margin: 0 auto;
+}
+
+input[type="text"] {
+width: 80%;
+padding: 8px;
+ margin: 10px 0;
+border: 1px solid #90caf9; /* Borde azul claro */
+border-radius: 4px;
+background-color: #f1f8e9; /* Fondo blanco pastel */
+display: inline-block;
+font-size: 24px;
+}
+
+button {
+padding: 10px 20px;
+border: none;
+background-color: #121212  ; /* Azul brillante */
+color: white;
+font-size: 21px;
+cursor: pointer;
+border-radius: 4px;
+transition: background-color 0.3s; /* Transición suave al pasar el mouse */
+}
+
+button:hover {
+background-color: #1976D2; /* Azul más oscuro al pasar el mouse */
+}
+
+
+footer {
+position: absolute;
+bottom: 10px; /* Distancia desde la parte inferior */
+right: 12px; /* Distancia desde la derecha */
+color: #b3e5fc; /* Azul Oscuro */
+font-weight: bold;
+}
+
