@@ -1,23 +1,25 @@
 .header {
     position: absolute;
-    top: 10px; /* Distancia desde la parte superior */
-    left: 10px; /* Distancia desde la izquierda */
-    font-size: 24px; /* Tamaño de fuente más pequeño */
-    color: #f0f6f8; /* Azul Oscuro */
+    top: 10px; 
+    left: 10px; 
+    font-size: 24px; 
+    color: #f0f6f8; 
 }
 
 h2 {
-    font-size: 32px; /* Tamaño de fuente reducido */
+    font-size: 32px; 
 }
 
 p {
-    font-size: 20px; /* Tamaño de fuente reducido */
-    margin-top: 30px; /* Menos espacio arriba */
-    margin-bottom: 15px; /* Menos espacio abajo */
+    font-style: italic;
+    font-size: 17px; 
+    margin-top: 30px; 
+    margin-bottom: 15px; 
+    opacity: 0.5;
 }
 
 .logo {
-    width: 80px; /* Tamaño de la imagen más pequeño */
+    width: 80px;
     height: auto; 
 }
 
@@ -36,8 +38,8 @@ body {
 }
 
 .container {
-    max-width: 400px; /* Contenedor más estrecho */
-    padding: 15px; /* Menos espacio en el contenedor */
+    max-width: 400px; 
+    padding: 15px; 
     border: 1px solid #0D47A1;
     border-radius: 8px;
     text-align: center;
@@ -47,21 +49,21 @@ body {
 }
 
 input[type="text"] {
-    width: 75%; /* Menor ancho */
-    padding: 6px; /* Menos espacio interior */
+    width: 75%; 
+    padding: 6px;
     margin: 8px 0;
     border: 1px solid #90caf9; 
     border-radius: 4px;
     background-color: #f1f8e9; 
-    font-size: 20px; /* Menor tamaño de fuente */
+    font-size: 20px; 
 }
 
 button {
-    padding: 8px 16px; /* Botón más pequeño */
+    padding: 8px 16px; 
     border: none;
     background-color: #121212;
     color: white;
-    font-size: 18px; /* Menor tamaño de fuente */
+    font-size: 18px; 
     cursor: pointer;
     border-radius: 4px;
     transition: background-color 0.3s;
@@ -85,20 +87,20 @@ footer {
       font-size: 14px;
     }
     .header {
-      font-size: 24px; /* Ajusta el tamaño del logo */
+      font-size: 24px; 
     }
     h2 {
-      font-size: 32px; /* Ajusta el tamaño del título */
+      font-size: 32px;
     }
     .container {
       padding: 10px;
-      width: 90%; /* Asegura que el contenedor no se vea muy pequeño */
+      width: 90%; 
     }
     input[type="text"] {
-      font-size: 18px; /* Ajusta el tamaño de la fuente en el input */
+      font-size: 18px; 
     }
     button {
-      font-size: 18px; /* Ajusta el tamaño del botón */
-      padding: 8px 16px; /* Ajusta el tamaño del botón en móviles */
+      font-size: 18px; 
+      padding: 8px 16px; 
     }
   }

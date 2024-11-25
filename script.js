@@ -1,26 +1,22 @@
-// Lógica de codificación Hamming (adaptada de tu código Java)
 function encode(input) {
     const inputLength = input.length;
 
-    // Calcular bits de paridad
     let p = 0;
     while (Math.pow(2, p) < inputLength + p + 1) {
         p++;
     }
 
-    // Crear arreglo con bits de paridad y datos
     const encoded = Array(inputLength + p).fill('0');
-    let j = 0; // Índice para los datos
+    let j = 0; 
 
     for (let i = 0; i < encoded.length; i++) {
         if (isPowerOfTwo(i + 1)) {
-            encoded[i] = '0'; // Bit de paridad
+            encoded[i] = '0'; 
         } else {
-            encoded[i] = input[j++]; // Dato
+            encoded[i] = input[j++]; 
         }
     }
 
-    // Calcular los bits de paridad
     for (let i = 0; i < p; i++) {
         const posicionParidad = Math.pow(2, i);
         encoded[posicionParidad - 1] = calculoParidad(encoded, posicionParidad);
@@ -45,7 +41,6 @@ function isPowerOfTwo(n) {
     return (n & (n - 1)) === 0;
 }
 
-// Lógica de detección y corrección
 function detectorYCorrector(input) {
     const n = input.length;
     let errorPos = 0;
@@ -59,18 +54,14 @@ function detectorYCorrector(input) {
         }
     }
 
-    if (errorPos === 0) {
-        return "No se detectó ningún error en el código.";
-    }
+   
 
-    // Corregir el error
     const corregido = input.split('');
     corregido[errorPos - 1] = corregido[errorPos - 1] === '1' ? '0' : '1';
 
-    return `Error detectado y corregido en la posición ${errorPos}. Código corregido: ${corregido.join('')}`;
+    return `Error detectado en la posición ${errorPos}.\nCódigo corregido: ${corregido.join('')}`;
 }
 
-// Integración con la página
 document.getElementById("encodeButton").addEventListener("click", () => {
     const inputData = document.getElementById("inputData").value.trim();
     if (!inputData) {
@@ -79,7 +70,7 @@ document.getElementById("encodeButton").addEventListener("click", () => {
     }
 
     const result = encode(inputData);
-    document.getElementById("output").textContent = `Código Hamming generado: ${result}`;
+    document.getElementById("output").textContent = `Código Hamming: ${result}`;
 });
 
 document.getElementById("detectButton").addEventListener("click", () => {
